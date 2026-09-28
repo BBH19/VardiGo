@@ -52,15 +52,13 @@ class _MyAppState extends State<MyApp> {
             return const Scaffold(
               body: Center(
                 child: Text(
-                  'Connexion au serveur impossible.',
+                  'Sunucuya bağlanılamıyor.',
                 ),
               ),
             );
           }
 
-          // =========================
-          // LOGIN RÉUSSI
-          // =========================
+        
 
           return BlocProvider(
             create: (_) => CandidateBloc()

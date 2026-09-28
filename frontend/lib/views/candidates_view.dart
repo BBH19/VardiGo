@@ -73,7 +73,7 @@ class _MatchedStaffViewState extends State<MatchedStaffView> {
             backgroundColor: Colors.white,
             body: Center(
               child: Text(
-                'Connexion employer impossible.',
+                'Sunucuya bağlanılamıyor.',
               ),
             ),
           );
