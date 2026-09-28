@@ -1,0 +1,39 @@
+VARDIGO — KISA CASE
+SÜREÇ NOTU
+
+1. KULLANILAN ARAÇLAR
+
+- Flutter / Dart
+- BLoC pattern (flutter_bloc)
+- PHP 8.5 REST API
+- SQLite
+- VS Code
+- Git / GitHub
+- Referans PNG'ler, design token dosyaları ve sağlanan asset'ler
+- AI destekli kodlama ve problem çözme araçları
+
+2. GELİŞTİRME SÜRECİ
+
+İlk olarak Flutter projesinin temel yapısını oluşturdum ve mevcut proje yapısına uygun olarak BLoC, model, service ve view katmanlarını ayırdım.
+
+Ardından verilen design token'ları, Urbanist fontunu, renkleri, spacing değerlerini, radius ve component ölçülerini uyguladım.
+
+İlk olarak "Eşleşen Personeller" ekranını geliştirdim. Referans PNG'deki aday kartları, seçim durumu, eşleşme sekmeleri, sıralama ve bottom CTA alanını oluşturdum.
+
+Sonrasında gerçek backend bağlantısını ekledim. PHP + SQLite kullanarak candidate ve offer endpoint'lerini geliştirdim ve verilen seed data'yı kullandım.
+
+API bağlantısından sonra "Görüşme Talepleri" ekranını geliştirdim. Bekleyen, Cevaplanan ve Süresi Dolan sekmelerini backend'deki status değerlerine bağladım.
+
+Son aşamada iki ekran arasındaki akışı test ettim. İşveren tarafından gönderilen görüşme taleplerinin iş arayan ekranında görünmesini ve kabul/red işlemlerinin SQLite üzerinde kalıcı olmasını kontrol ettim.
+
+3. KARŞILAŞTIĞIM NOKTALAR
+
+En önemli noktalardan biri, frontend'deki mevcut sekmenin yalnızca o sekmeye ait verileri içermesi nedeniyle toplam eşleşme sayılarını liste uzunluğundan hesaplamamak oldu. Bu değerleri API response üzerinden ayrı olarak taşıdım.
+
+Ayrıca worker ekranındaki bekleyen talep sayısının gerçek offer listesinin uzunluğundan hesaplanan bir değer değil, seed/spec içerisinde verilen bir label olduğunu dikkate alarak frontend'e ayrı bir değer olarak aktardım.
+
+4. BİLEREK YAPILMAYANLAR
+
+Case kapsamı dışında olduğu için SMS authentication, production authentication sistemi, push notification ve PostgreSQL gibi production altyapıları uygulanmadı.
+
+Case için sabit employer ve worker rolleri kullanıldı.
