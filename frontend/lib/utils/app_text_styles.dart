@@ -75,14 +75,14 @@ abstract final class AppTextStyles {
     letterSpacing: GlobalParams.tracking14,
     color: color,
   );
-    static TextStyle tab12(Color c) => _style(
-        size: GlobalParams.fontSize12,
-        weight: FontWeight.w500,
-        lineHeight: GlobalParams.lineHeight16,
-        letterSpacing: GlobalParams.tracking12,
-        color: c,
-      );
-        static TextStyle get caption12Med => _style(
+  static TextStyle tab12(Color c) => _style(
+    size: GlobalParams.fontSize12,
+    weight: FontWeight.w500,
+    lineHeight: GlobalParams.lineHeight16,
+    letterSpacing: GlobalParams.tracking12,
+    color: c,
+    );
+   static TextStyle get caption12Med => _style(
         size:GlobalParams.fontSize12,
         weight:FontWeight.w500,
         lineHeight:GlobalParams.lineHeight16,

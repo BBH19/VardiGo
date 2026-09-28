@@ -14,9 +14,7 @@ class OfferBloc extends Bloc<OfferEvent, OfferState> {
             pendingCount: 0,
           ),
         ) {
-    // ------------------------------------------------------------
-    // INITIALIZE
-    // ------------------------------------------------------------
+
     on<InitializingOfferEvent>((event, emit) async {
       emit(
         OfferState(
@@ -55,9 +53,7 @@ class OfferBloc extends Bloc<OfferEvent, OfferState> {
       }
     });
 
-    // ------------------------------------------------------------
-    // LOAD OFFERS
-    // ------------------------------------------------------------
+
     on<LoadOffersEvent>((event, emit) async {
       emit(
         OfferState(
@@ -100,9 +96,7 @@ class OfferBloc extends Bloc<OfferEvent, OfferState> {
       }
     });
 
-    // ------------------------------------------------------------
-    // CHANGE TAB
-    // ------------------------------------------------------------
+
     on<ChangeOfferTabEvent>((event, emit) async {
       emit(
         OfferState(
@@ -145,9 +139,6 @@ class OfferBloc extends Bloc<OfferEvent, OfferState> {
       }
     });
 
-    // ------------------------------------------------------------
-    // ACCEPT OFFER
-    // ------------------------------------------------------------
     on<AcceptOfferEvent>((event, emit) async {
       emit(
         OfferState(
@@ -220,9 +211,7 @@ class OfferBloc extends Bloc<OfferEvent, OfferState> {
       }
     });
 
-    // ------------------------------------------------------------
-    // REJECT OFFER
-    // ------------------------------------------------------------
+ 
     on<RejectOfferEvent>((event, emit) async {
       emit(
         OfferState(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:frontend/blocs/Candidate/candidate_bloc.dart';
 import 'package:frontend/blocs/Candidate/candidate_event.dart';
 import 'package:frontend/services/vardigo_service.dart';
@@ -40,9 +39,6 @@ class _MyAppState extends State<MyApp> {
       home: FutureBuilder<bool>(
         future: loginFuture,
         builder: (context, snapshot) {
-          // =========================
-          // LOGIN EN COURS
-          // =========================
 
           if (snapshot.connectionState != ConnectionState.done) {
             return const Scaffold(
@@ -51,10 +47,6 @@ class _MyAppState extends State<MyApp> {
               ),
             );
           }
-
-          // =========================
-          // LOGIN ÉCHOUÉ
-          // =========================
 
           if (snapshot.data != true) {
             return const Scaffold(

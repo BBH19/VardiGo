@@ -11,9 +11,6 @@ import 'package:frontend/utils/global_params.dart';
 class VardigoService {
   static String? token;
 
-  // =========================
-  // LOGIN
-  // =========================
 
   static Future<bool> login(String role) async {
     try {
@@ -52,10 +49,6 @@ class VardigoService {
       return false;
     }
   }
-
-  // =========================
-  // GET CANDIDATES
-  // =========================
 
 static Future<Map<String, dynamic>> getCandidates({
   String? tab,
@@ -109,9 +102,6 @@ static Future<Map<String, dynamic>> getCandidates({
     'pendingCountLabel': 0,
   };
 }
-  // =========================
-  // CREATE OFFERS
-  // =========================
 
   static Future<bool> createOffers(
     List<String> workerIds,
@@ -133,10 +123,6 @@ static Future<Map<String, dynamic>> getCandidates({
 
     return res.statusCode == 200 || res.statusCode == 201;
   }
-
-  // =========================
-  // GET OFFERS
-  // =========================
 
   static Future<List<Offer>> getOffers({
     String status = 'pending',
@@ -172,10 +158,6 @@ static Future<Map<String, dynamic>> getCandidates({
     return [];
   }
 
-  // =========================
-  // ACCEPT OFFER
-  // =========================
-
   static Future<bool> acceptOffer(String id) async {
     print('ACCEPT OFFER TOKEN = $token');
     print('ACCEPT OFFER ID = $id');
@@ -194,9 +176,6 @@ static Future<Map<String, dynamic>> getCandidates({
     return res.statusCode == 200;
   }
 
-  // =========================
-  // REJECT OFFER
-  // =========================
 
   static Future<bool> rejectOffer(String id) async {
     print('REJECT OFFER TOKEN = $token');

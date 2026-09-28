@@ -11,7 +11,7 @@ import 'package:frontend/models/candidate.dart';
 import 'package:frontend/services/vardigo_service.dart';
 import 'package:frontend/utils/app_text_styles.dart';
 import 'package:frontend/utils/global_params.dart';
-import 'package:frontend/views/offers_view.dart';
+import 'package:frontend/views/interview_requests_view.dart';
 import 'package:frontend/widgets/common/app_icon_button.dart';
 import 'package:frontend/widgets/condidate/candidate_avatar.dart';
 import 'package:frontend/widgets/condidate/candidate_sort_chip.dart';

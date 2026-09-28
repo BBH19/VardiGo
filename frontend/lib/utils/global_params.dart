@@ -31,8 +31,8 @@ class GlobalParams {
   static const Color soft = Color(0xFFA3A3A3);
   static const Color soft400 = Color(0xFFA3A3A3);
   static const Color kOrange = Color(0xFFF07A1A);
-static const Color kPurple = Color(0xFF7B4FE0);
-static const Color kSalaryBg = Color(0xFFF5F7FB);
+  static const Color kPurple = Color(0xFF7B4FE0);
+  static const Color kSalaryBg = Color(0xFFF5F7FB);
 
 
   // ============================================================
